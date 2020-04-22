@@ -1,4 +1,4 @@
-# check-user-permissions-in-nuxt
+# Manage User Permissions In Nuxt
 
 > User permissions example in Nuxt
 >
