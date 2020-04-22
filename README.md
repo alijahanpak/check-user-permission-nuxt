@@ -1,6 +1,22 @@
 # check-user-permissions-in-nuxt
 
-> example of user permissions in Nuxt
+> User permissions example in Nuxt
+>
+
+This plugin path in '~/plugins/managePermissions.js'
+
+for use it  add to nuxt.config.js
+```html
+plugins: [
+    '~/plugins/managePermissions',
+  ],
+```
+
+> To add permission only use $can('permissionType') in project tags
+```html
+v-show="$can('INSERT','DELETE')"
+v-show="$can('DELETE')"
+```
 
 ## Build Setup
 

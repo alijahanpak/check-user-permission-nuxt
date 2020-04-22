@@ -14,6 +14,7 @@
           :to="item.to"
           router
           exact
+          v-show="$can(item.permission)"
         >
           <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
@@ -99,12 +100,14 @@ export default {
         {
           icon: 'mdi-apps',
           title: 'Welcome',
-          to: '/'
+          to: '/',
+          permission: 'SHOW_WELCOME_LINK'
         },
         {
           icon: 'mdi-chart-bubble',
           title: 'Inspire',
-          to: '/inspire'
+          to: '/inspire',
+          permission: 'SHOW_INSPIRE_LINK'
         }
       ],
       miniVariant: false,
