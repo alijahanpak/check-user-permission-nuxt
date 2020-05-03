@@ -46,6 +46,17 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
   ],
+
+  pwa: {
+    manifest: {
+      name: 'Manage User Permissions',
+      lang: 'en',
+      display: 'standalone'
+    },
+    icon: {
+      iconSrc: './static/icon.png',
+    },
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
