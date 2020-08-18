@@ -14,8 +14,8 @@ plugins: [
 
 > To add permission only use $can('permissionType') in project tags
 ```html
-v-show="$can('INSERT','DELETE')"
-v-show="$can('DELETE')"
+v-show="$can('permission1')"
+v-show="$can('permission1', 'permission2' , ...)"
 ```
 
 ## Build Setup
