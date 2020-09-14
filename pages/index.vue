@@ -59,19 +59,36 @@ export default {
   }),
   mounted() {
     this.getOneSignal();
+    this.setUpdateDataThread();
   },
   methods: {
     getOneSignal() {
+      alert('Ali')
       this.$OneSignal.push(() => {
-      this.$OneSignal.isPushNotificationsEnabled((isEnabled) => {
-        if (isEnabled) {
-          console.log('Push notifications are enabled!')
-        } else {
-          console.log('Push notifications are not enabled yet.')
-        }
+        this.$OneSignal.isPushNotificationsEnabled((isEnabled) => {
+          if (isEnabled) {
+            console.log('Push notifications are enabled!')
+          } else {
+            console.log('Push notifications are not enabled yet.')
+          }
+        })
       })
-    })
-    }
+    },
+    testOneSignal() {
+      window.$OneSignal.push(['addListenerForNotificationOpened', (data) => {
+        console.log('Received NotificationOpened:', data )}
+      ]);
+    },
+
+    setUpdateDataThread: function () {
+      console.log("...................................................... set Building update thread");
+      setInterval(this.updateDataThread, 60000);
+    },
+
+    updateDataThread: function () {
+          console.log("...................................................... Building update thread");
+          this.testOneSignal();
+        },
   },
 }
 </script>
