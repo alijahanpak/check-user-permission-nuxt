@@ -59,13 +59,15 @@ export default {
     ],
   }),
   mounted() {
-    this.getOneSignal();
-    this.setUpdateDataThread();
+    //this.getOneSignal();
+  },
+  beforeMount() {
+    //this.setUpdateDataThread();
   },
   methods: {
-    getOneSignal() {
+    /*getOneSignal() {
+      this.isEnabled = true;
       this.$OneSignal.push(() => {
-        this.isEnabled = true;
         this.$OneSignal.isPushNotificationsEnabled((isEnabled) => {
           if (isEnabled) {
             console.log('Push notifications are enabled!')
@@ -89,7 +91,7 @@ export default {
     updateDataThread: function () {
           console.log("...................................................... Building update thread");
           this.testOneSignal();
-        },
+        },*/
   },
 }
 </script>

@@ -6,6 +6,18 @@ export default {
   ** Headers of the page
   */
   head: {
+    script: [
+      {
+        src: 'https://app.najva.com/static/js/scripts/netlify249-website-18070-d1528a62-f10f-4ba2-b55d-0e5a6a718ad7.js" + "?v=" + version'
+      },
+
+    ],
+    link: [
+      {
+        rel: 'manifest',
+        href: '/manifest.json'
+      }
+    ],
     titleTemplate: '%s - ' + process.env.npm_package_name,
     title: process.env.npm_package_name || '',
     meta: [
@@ -70,7 +82,6 @@ export default {
   */
   oneSignal: {
     cdn: true,
-
   // Use any custom URL
     OneSignalSDK: 'https://cdn.onesignal.com/sdks/OneSignalSDK.js',
     init: {
