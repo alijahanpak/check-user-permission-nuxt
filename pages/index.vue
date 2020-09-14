@@ -57,5 +57,21 @@ export default {
       { title: 'Best airlines', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', flex: 6 },
     ],
   }),
+  mounted() {
+    this.getOneSignal();
+  },
+  methods: {
+    getOneSignal() {
+      this.$OneSignal.push(() => {
+      this.$OneSignal.isPushNotificationsEnabled((isEnabled) => {
+        if (isEnabled) {
+          console.log('Push notifications are enabled!')
+        } else {
+          console.log('Push notifications are not enabled yet.')
+        }
+      })
+    })
+    }
+  },
 }
 </script>

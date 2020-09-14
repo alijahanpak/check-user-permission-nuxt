@@ -44,6 +44,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/onesignal',
     '@nuxtjs/pwa',
   ],
 
@@ -67,6 +68,19 @@ export default {
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
   */
+  oneSignal: {
+    cdn: true,
+
+  // Use any custom URL
+    OneSignalSDK: 'https://cdn.onesignal.com/sdks/OneSignalSDK.js',
+    init: {
+      appId: '79393342-d9f1-4816-a418-3374e1863e26',
+      allowLocalhostAsSecureOrigin: true,
+      welcomeNotification: {
+          disable: true
+      }
+    }
+  },
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
