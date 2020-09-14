@@ -63,7 +63,6 @@ export default {
   },
   methods: {
     getOneSignal() {
-      alert('Ali')
       this.$OneSignal.push(() => {
         this.$OneSignal.isPushNotificationsEnabled((isEnabled) => {
           if (isEnabled) {
