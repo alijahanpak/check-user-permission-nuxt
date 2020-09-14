@@ -8,7 +8,7 @@ export default {
   head: {
     script: [
       {
-        src: 'https://app.najva.com/static/js/scripts/netlify249-website-18070-d1528a62-f10f-4ba2-b55d-0e5a6a718ad7.js" + "?v=" + version'
+        src: "https://app.najva.com/static/js/scripts/netlify249-website-18070-d1528a62-f10f-4ba2-b55d-0e5a6a718ad7.js"
       },
 
     ],
@@ -56,7 +56,6 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/onesignal',
     '@nuxtjs/pwa',
   ],
 
@@ -80,7 +79,7 @@ export default {
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
   */
-  oneSignal: {
+  /*oneSignal: {
     cdn: true,
   // Use any custom URL
     OneSignalSDK: 'https://cdn.onesignal.com/sdks/OneSignalSDK.js',
@@ -91,7 +90,7 @@ export default {
           disable: true
       }
     }
-  },
+  },*/
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
